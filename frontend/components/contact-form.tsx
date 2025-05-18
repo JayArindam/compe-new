@@ -80,7 +80,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="glass-card rounded-xl p-6">
+    <div className="glass-card rounded-xl p-6" id="contact">
       <h2 className="text-2xl font-vt323 gradient-heading mb-6">Get in Touch</h2>
 
       <Form {...form}>

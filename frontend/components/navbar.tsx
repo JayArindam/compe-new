@@ -58,16 +58,16 @@ export default function Navbar() {
             <Link href="/faq" className="text-white hover:text-orange-500 font-display">
               FAQ
             </Link>
-            <Link href="/contact" className="text-white hover:text-orange-500 font-display">
+            <Link href="#contact" className="text-white hover:text-orange-500 font-display">
               Contact
             </Link>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
+            {/* <Button variant="ghost" size="icon">
               <Search className="h-5 w-5" />
-            </Button>
+            </Button> */}
             <Link href={isAuthenticated ? "/profile" : "/login"}>
               <Button variant="ghost" size="icon">
                 <User className="h-5 w-5" />
