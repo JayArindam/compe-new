@@ -64,14 +64,14 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 pt-24 pb-16">
       <section className="mb-16">
-        <h1 className="text-3xl md:text-4xl font-vt323 gradient-heading mb-8 text-center">About TechTrove</h1>
+        <h1 className="text-3xl md:text-4xl font-vt323 gradient-heading mb-8 text-center">About CompeStore</h1>
 
         <div className="glass-card rounded-xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-display mb-4">Our Story</h2>
               <p className="text-gray-300 mb-4">
-                Founded in 2018, TechTrove began as a small passion project by a group of tech enthusiasts who wanted to
+                Founded in 2018, CompeStore began as a small passion project by a group of tech enthusiasts who wanted to
                 create a different kind of computer store—one that combined cutting-edge technology with exceptional
                 customer service and a unique retro-futuristic aesthetic.
               </p>
@@ -81,14 +81,14 @@ export default function AboutPage() {
                 satisfaction has remained at the core of everything we do.
               </p>
               <p className="text-gray-300">
-                Today, TechTrove offers a carefully curated selection of high-performance computers, components, and
+                Today, CompeStore offers a carefully curated selection of high-performance computers, components, and
                 peripherals, all backed by our technical expertise and dedication to helping our customers find the
                 perfect tech solutions for their needs.
               </p>
             </div>
 
             <div className="relative h-64 md:h-full min-h-[300px] rounded-xl overflow-hidden">
-              <Image src="/placeholder.svg?height=600&width=800" alt="TechTrove office" fill className="object-cover" />
+              <Image src="/placeholder.svg?height=600&width=800" alt="CompeStore office" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
