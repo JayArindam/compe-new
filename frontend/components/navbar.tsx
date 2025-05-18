@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <h1 className="text-2xl md:text-3xl font-vt323 gradient-heading">
-              TECH<span className="text-white">TROVE</span>
+              COMPE<span className="text-white">STORE</span>
             </h1>
           </Link>
 

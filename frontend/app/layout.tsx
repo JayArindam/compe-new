@@ -21,7 +21,7 @@ const vt323 = VT323({
 })
 
 export const metadata: Metadata = {
-  title: "TechTrove | Retro-Futuristic Computer Store",
+  title: "CompeStore | Retro-Futuristic Computer Store",
   description: "Your one-stop shop for computers and peripherals with a retro-futuristic twist",
     generator: 'v0.dev'
 }

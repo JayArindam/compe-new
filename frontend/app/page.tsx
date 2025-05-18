@@ -5,28 +5,30 @@ import ContactForm from "@/components/contact-form"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
+import compe from '../public/compe.jpg'
+import compe1 from '../public/compe2.jpg'
+import compe2 from '../public/compe3.jpg'
 // Sample data for carousel
 const carouselItems = [
   {
     id: "1",
     title: "Next-Gen Gaming PCs",
     description: "Experience gaming like never before with our high-performance custom builds.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: compe.src,
     link: "/products?category=gaming",
   },
   {
     id: "2",
     title: "Professional Workstations",
     description: "Powerful machines designed for creators, developers, and professionals.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: compe1.src,
     link: "/products?category=workstation",
   },
   {
     id: "3",
     title: "Premium Peripherals",
     description: "Enhance your setup with our selection of high-quality keyboards, mice, and more.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: compe2.src,
     link: "/products?category=peripherals",
   },
 ]
@@ -153,7 +155,7 @@ export default function Home() {
 
             <div className="glass-card rounded-xl p-6">
               <h3 className="text-xl font-display mb-4">Contact Information</h3>
-              <p className="text-gray-300 mb-2">Email: support@techtrove.com</p>
+              <p className="text-gray-300 mb-2">Email: support@compestore.com</p>
               <p className="text-gray-300 mb-2">Phone: +1 (555) 123-4567</p>
               <p className="text-gray-300">Hours: Mon-Fri, 9am-6pm PST</p>
             </div>
