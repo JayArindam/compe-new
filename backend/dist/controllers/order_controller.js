@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.placeOrder = void 0;
+exports.getPreviousOrders = exports.placeOrder = void 0;
 const order_model_1 = __importDefault(require("../models/order_model"));
 // @desc    Place a new order with multiple items
 // @route   POST /api/orders
@@ -44,3 +44,18 @@ const placeOrder = async (req, res) => {
     }
 };
 exports.placeOrder = placeOrder;
+const getPreviousOrders = async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const orders = await order_model_1.default.find({ user: userId }).sort({ createdAt: -1 });
+        if (!orders || orders.length === 0) {
+            return res.status(404).json({ message: 'No previous orders found' });
+        }
+        res.json({ success: true, orders });
+    }
+    catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+exports.getPreviousOrders = getPreviousOrders;

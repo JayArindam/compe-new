@@ -46,3 +46,19 @@ export const placeOrder = async (req: any, res: any) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
+export const getPreviousOrders = async (req: any, res: any) => {
+  try {
+    const userId = req.params.userId;
+    const orders = await Order.find({ user: userId }).sort({ createdAt: -1 });
+
+    if (!orders || orders.length === 0) {
+      return res.status(404).json({ message: 'No previous orders found' });
+    }
+
+    res.json({ success: true, orders });
+  } catch (error) {
+    console.error('Error fetching orders:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
