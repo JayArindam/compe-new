@@ -5,6 +5,9 @@ import ContactForm from "@/components/contact-form"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import  carousel  from "../public/carousel1.jpg"
+import carousel2 from "../public/carousel2.jpg"
+import carousel3 from "../public/carousel3.jpg"
 
 // Sample data for carousel
 const carouselItems = [
@@ -12,21 +15,21 @@ const carouselItems = [
     id: "1",
     title: "Next-Gen Gaming PCs",
     description: "Experience gaming like never before with our high-performance custom builds.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: carousel.src,
     link: "/products?category=gaming",
   },
   {
     id: "2",
     title: "Professional Workstations",
     description: "Powerful machines designed for creators, developers, and professionals.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: carousel2.src,
     link: "/products?category=workstation",
   },
   {
     id: "3",
     title: "Premium Peripherals",
     description: "Enhance your setup with our selection of high-quality keyboards, mice, and more.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: carousel3.src,
     link: "/products?category=peripherals",
   },
 ]

@@ -1,31 +1,38 @@
 import Image from "next/image"
 import { Star } from "lucide-react"
-
+import aboutmain from "../../public/aboutmain.jpg"
+import person1 from "../../public/person1.jpg"
+import person2 from "../../public/person2.jpg"
+import person3 from "../../public/person3.jpg"
+import person4 from "../../public/person4.jpg"
+import perico1 from "../../public/perico1.jpg"
+import perico2 from "../../public/perico2.jpg"
+import perico3 from "../../public/perico3.jpg"
 // Sample team members data
 const teamMembers = [
   {
-    name: "Alex Johnson",
-    role: "Founder & CEO",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Tech enthusiast with over 15 years of experience in the industry. Founded CompeStore with a vision to make cutting-edge technology accessible to everyone.",
+    name: "Jay Arindam Maity",
+    role: "Full Stack Developer",
+    image: person1.src,
+    bio: "Experienced full stack developer passionate about building scalable web applications and seamless user experiences.",
   },
   {
-    name: "Samantha Lee",
-    role: "CTO",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Former software engineer at major tech companies. Leads our product development team and ensures we stay at the forefront of technological innovation.",
+    name: "Karanpreet Singh",
+    role: "Full Stack Developer",
+    image: person2.src,
+    bio: "Skilled in both front-end and back-end development, focusing on delivering high-quality, maintainable code.",
   },
   {
-    name: "Marcus Chen",
-    role: "Head of Design",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Award-winning designer with a passion for creating intuitive and visually stunning user experiences. Responsible for CompeStore's unique retro-futuristic aesthetic.",
+    name: "Karishma Dhawan",
+    role: "Full Stack Developer",
+    image: person3.src,
+    bio: "Committed to crafting efficient and innovative solutions with a keen eye on performance and usability.",
   },
   {
-    name: "Priya Patel",
-    role: "Customer Experience Manager",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Dedicated to ensuring every customer has an exceptional experience. Leads our support team with empathy and technical expertise.",
+    name: "Jasmine Rathore",
+    role: "Full Stack Developer",
+    image: person4.src,
+    bio: "Passionate about integrating modern technologies to build robust and user-friendly web applications.",
   },
 ]
 
@@ -35,7 +42,7 @@ const testimonials = [
     id: 1,
     name: "David Wilson",
     company: "Freelance Developer",
-    image: "/placeholder.svg?height=100&width=100",
+    image: perico2.src,
     quote:
       "CompeStore has been my go-to for all my tech needs. Their gaming PC builds are exceptional, and the customer service is unmatched. Highly recommended!",
     rating: 5,
@@ -44,7 +51,7 @@ const testimonials = [
     id: 2,
     name: "Emily Rodriguez",
     company: "Graphic Designer",
-    image: "/placeholder.svg?height=100&width=100",
+    image: perico1.src,
     quote:
       "As a designer, I need reliable equipment that can handle demanding creative software. The workstation I purchased from CompeStore has exceeded all my expectations.",
     rating: 5,
@@ -53,7 +60,7 @@ const testimonials = [
     id: 3,
     name: "Michael Chang",
     company: "E-sports Professional",
-    image: "/placeholder.svg?height=100&width=100",
+    image: perico3.src,
     quote:
       "The gaming peripherals from CompeStore give me the competitive edge I need. Fast shipping, quality products, and great prices. What more could you ask for?",
     rating: 4,
@@ -88,7 +95,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative h-64 md:h-full min-h-[300px] rounded-xl overflow-hidden">
-              <Image src="/placeholder.svg?height=600&width=800" alt="CompeStore office" fill className="object-cover" />
+              <Image src={aboutmain} alt="CompeStore office" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
