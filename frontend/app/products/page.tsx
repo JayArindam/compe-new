@@ -10,7 +10,18 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Filter, Search, SlidersHorizontal, X } from "lucide-react"
-
+import gamingpc from "../../public/gamingpc.jpg"
+import workstation from "../../public/workstation.jpg"
+import rbgkeybaord from "../../public/rgbkeyboard.jpg"
+import monitor from "../../public/monitor.jpg"
+import mouse from "../../public/mouse.jpg"
+import vr from "../../public/vr.jpg"
+import minipc from "../../public/mini.jpg"
+import gamingheadset from "../../public/gamingheadset.jpg"
+import chair from "../../public/chair.jpg"
+import gamingdesk from "../../public/gamingdesk.jpg"
+import ssd from "../../public/ssd.jpg"
+import wireless from "../../public/wireless.jpg"
 // Sample products data
 const allProducts: Product[] = [
   {
@@ -18,7 +29,7 @@ const allProducts: Product[] = [
     name: "Quantum X Gaming PC",
     description: "High-performance gaming PC with RGB lighting, liquid cooling, and the latest GPU technology.",
     price: 1999.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: gamingpc.src,
     category: "Gaming PC",
   },
   {
@@ -26,7 +37,7 @@ const allProducts: Product[] = [
     name: "Developer Pro Workstation",
     description: "Powerful workstation optimized for coding, virtualization, and development workflows.",
     price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: workstation.src,
     category: "Workstation",
   },
   {
@@ -34,7 +45,7 @@ const allProducts: Product[] = [
     name: "Mechanical RGB Keyboard",
     description: "Premium mechanical keyboard with customizable RGB lighting and programmable macros.",
     price: 149.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: rbgkeybaord.src,
     category: "Peripherals",
   },
   {
@@ -42,7 +53,7 @@ const allProducts: Product[] = [
     name: "Ultra HD Monitor",
     description: "32-inch 4K monitor with HDR support, perfect for gaming and content creation.",
     price: 499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: monitor.src,
     category: "Monitors",
   },
   {
@@ -50,7 +61,7 @@ const allProducts: Product[] = [
     name: "Wireless Gaming Mouse",
     description: "Ultra-responsive wireless gaming mouse with adjustable DPI and ergonomic design.",
     price: 89.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: mouse.src,
     category: "Peripherals",
   },
   {
@@ -58,7 +69,7 @@ const allProducts: Product[] = [
     name: "VR Headset Pro",
     description: "Immersive virtual reality headset with high-resolution displays and precise tracking.",
     price: 599.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: vr.src,
     category: "VR",
   },
   {
@@ -66,7 +77,7 @@ const allProducts: Product[] = [
     name: "Compact Mini PC",
     description: "Powerful mini PC perfect for home entertainment and everyday computing tasks.",
     price: 799.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: minipc.src,
     category: "Mini PC",
   },
   {
@@ -74,7 +85,7 @@ const allProducts: Product[] = [
     name: "Gaming Headset",
     description: "Surround sound gaming headset with noise-cancelling microphone and RGB lighting.",
     price: 129.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: gamingheadset.src,
     category: "Audio",
   },
   {
@@ -82,7 +93,7 @@ const allProducts: Product[] = [
     name: "Ergonomic Office Chair",
     description: "Comfortable ergonomic chair designed for long hours of work or gaming.",
     price: 349.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: chair.src,
     category: "Furniture",
   },
   {
@@ -90,7 +101,7 @@ const allProducts: Product[] = [
     name: "RGB Gaming Desk",
     description: "Spacious gaming desk with built-in RGB lighting and cable management system.",
     price: 299.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: gamingdesk.src,
     category: "Furniture",
   },
   {
@@ -98,7 +109,7 @@ const allProducts: Product[] = [
     name: "External SSD 1TB",
     description: "Ultra-fast external SSD with 1TB capacity and USB-C connectivity.",
     price: 179.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: ssd.src,
     category: "Storage",
   },
   {
@@ -106,7 +117,7 @@ const allProducts: Product[] = [
     name: "Wireless Charging Pad",
     description: "Fast wireless charging pad compatible with all Qi-enabled devices.",
     price: 49.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: wireless.src,
     category: "Accessories",
   },
 ]
