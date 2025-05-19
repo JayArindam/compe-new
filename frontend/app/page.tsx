@@ -8,7 +8,14 @@ import { Button } from "@/components/ui/button"
 import  carousel  from "../public/carousel1.jpg"
 import carousel2 from "../public/carousel2.jpg"
 import carousel3 from "../public/carousel3.jpg"
-
+import gamingpc from "../public/gamingpc.jpg"
+import workstation from "../public/workstation.jpg"
+import rbgkeybaord from "../public/rgbkeyboard.jpg"
+import monitor from "../public/monitor.jpg"
+import mouse from "../public/mouse.jpg"
+import vr from "../public/vr.jpg"
+import minipc from "../public/mini.jpg"
+import gamingheadset from "../public/gamingheadset.jpg"
 // Sample data for carousel
 const carouselItems = [
   {
@@ -41,7 +48,7 @@ const featuredProducts = [
     name: "Quantum X Gaming PC",
     description: "High-performance gaming PC with RGB lighting, liquid cooling, and the latest GPU technology.",
     price: 1999.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: gamingpc.src,
     category: "Gaming PC",
   },
   {
@@ -49,7 +56,7 @@ const featuredProducts = [
     name: "Developer Pro Workstation",
     description: "Powerful workstation optimized for coding, virtualization, and development workflows.",
     price: 2499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: workstation.src,
     category: "Workstation",
   },
   {
@@ -57,7 +64,7 @@ const featuredProducts = [
     name: "Mechanical RGB Keyboard",
     description: "Premium mechanical keyboard with customizable RGB lighting and programmable macros.",
     price: 149.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: rbgkeybaord.src,
     category: "Peripherals",
   },
   {
@@ -65,7 +72,7 @@ const featuredProducts = [
     name: "Ultra HD Monitor",
     description: "32-inch 4K monitor with HDR support, perfect for gaming and content creation.",
     price: 499.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: monitor.src,
     category: "Monitors",
   },
   {
@@ -73,7 +80,7 @@ const featuredProducts = [
     name: "Wireless Gaming Mouse",
     description: "Ultra-responsive wireless gaming mouse with adjustable DPI and ergonomic design.",
     price: 89.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: mouse.src,
     category: "Peripherals",
   },
   {
@@ -81,7 +88,7 @@ const featuredProducts = [
     name: "VR Headset Pro",
     description: "Immersive virtual reality headset with high-resolution displays and precise tracking.",
     price: 599.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: vr.src,
     category: "VR",
   },
   {
@@ -89,7 +96,7 @@ const featuredProducts = [
     name: "Compact Mini PC",
     description: "Powerful mini PC perfect for home entertainment and everyday computing tasks.",
     price: 799.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: minipc.src,
     category: "Mini PC",
   },
   {
@@ -97,7 +104,7 @@ const featuredProducts = [
     name: "Gaming Headset",
     description: "Surround sound gaming headset with noise-cancelling microphone and RGB lighting.",
     price: 129.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: gamingheadset.src,
     category: "Audio",
   },
 ]

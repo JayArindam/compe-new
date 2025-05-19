@@ -10,9 +10,9 @@ import { useCart } from "@/context/cart-context"
 import { useToast } from "@/components/ui/use-toast"
 
 export interface Product {
-  id: string
-  name: string
-  description: string
+  id: any
+  name: any
+  description: any
   price: number
   image: string
   category: string
