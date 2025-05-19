@@ -5,30 +5,28 @@ import ContactForm from "@/components/contact-form"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import compe from '../public/compe.jpg'
-import compe1 from '../public/compe2.jpg'
-import compe2 from '../public/compe3.jpg'
+
 // Sample data for carousel
 const carouselItems = [
   {
     id: "1",
     title: "Next-Gen Gaming PCs",
     description: "Experience gaming like never before with our high-performance custom builds.",
-    image: compe.src,
+    image: "/placeholder.svg?height=600&width=1200",
     link: "/products?category=gaming",
   },
   {
     id: "2",
     title: "Professional Workstations",
     description: "Powerful machines designed for creators, developers, and professionals.",
-    image: compe1.src,
+    image: "/placeholder.svg?height=600&width=1200",
     link: "/products?category=workstation",
   },
   {
     id: "3",
     title: "Premium Peripherals",
     description: "Enhance your setup with our selection of high-quality keyboards, mice, and more.",
-    image: compe2.src,
+    image: "/placeholder.svg?height=600&width=1200",
     link: "/products?category=peripherals",
   },
 ]
@@ -161,7 +159,7 @@ export default function Home() {
             </div>
           </div>
 
-          <ContactForm/>
+          <ContactForm />
         </div>
       </section>
     </div>

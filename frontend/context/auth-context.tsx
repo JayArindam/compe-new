@@ -7,6 +7,7 @@ import { useToast } from "@/components/ui/use-toast"
 interface User {
   username: string
   email: string
+  id: string
 }
 
 interface AuthContextType {
@@ -57,13 +58,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         throw new Error(data.message || "Login failed")
       }
 
-      // Assuming the API returns a token and user data
+      // Assuming the API returns a token
       const { token } = data
 
       // For demo purposes, create a user object
+      // In a real app, you might want to fetch user details from another endpoint
       const userData = {
         username: email.split("@")[0], // Extract username from email
         email,
+        id: "6829b8aefd4a3ad10bf0d7d8", // Using the sample user ID for demo
       }
 
       setToken(token)

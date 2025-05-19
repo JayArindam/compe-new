@@ -7,7 +7,7 @@ const teamMembers = [
     name: "Alex Johnson",
     role: "Founder & CEO",
     image: "/placeholder.svg?height=300&width=300",
-    bio: "Tech enthusiast with over 15 years of experience in the industry. Founded TechTrove with a vision to make cutting-edge technology accessible to everyone.",
+    bio: "Tech enthusiast with over 15 years of experience in the industry. Founded CompeStore with a vision to make cutting-edge technology accessible to everyone.",
   },
   {
     name: "Samantha Lee",
@@ -19,7 +19,7 @@ const teamMembers = [
     name: "Marcus Chen",
     role: "Head of Design",
     image: "/placeholder.svg?height=300&width=300",
-    bio: "Award-winning designer with a passion for creating intuitive and visually stunning user experiences. Responsible for TechTrove's unique retro-futuristic aesthetic.",
+    bio: "Award-winning designer with a passion for creating intuitive and visually stunning user experiences. Responsible for CompeStore's unique retro-futuristic aesthetic.",
   },
   {
     name: "Priya Patel",
@@ -37,7 +37,7 @@ const testimonials = [
     company: "Freelance Developer",
     image: "/placeholder.svg?height=100&width=100",
     quote:
-      "TechTrove has been my go-to for all my tech needs. Their gaming PC builds are exceptional, and the customer service is unmatched. Highly recommended!",
+      "CompeStore has been my go-to for all my tech needs. Their gaming PC builds are exceptional, and the customer service is unmatched. Highly recommended!",
     rating: 5,
   },
   {
@@ -46,7 +46,7 @@ const testimonials = [
     company: "Graphic Designer",
     image: "/placeholder.svg?height=100&width=100",
     quote:
-      "As a designer, I need reliable equipment that can handle demanding creative software. The workstation I purchased from TechTrove has exceeded all my expectations.",
+      "As a designer, I need reliable equipment that can handle demanding creative software. The workstation I purchased from CompeStore has exceeded all my expectations.",
     rating: 5,
   },
   {
@@ -55,7 +55,7 @@ const testimonials = [
     company: "E-sports Professional",
     image: "/placeholder.svg?height=100&width=100",
     quote:
-      "The gaming peripherals from TechTrove give me the competitive edge I need. Fast shipping, quality products, and great prices. What more could you ask for?",
+      "The gaming peripherals from CompeStore give me the competitive edge I need. Fast shipping, quality products, and great prices. What more could you ask for?",
     rating: 4,
   },
 ]

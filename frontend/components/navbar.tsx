@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, ShoppingCart, User, Search } from "lucide-react"
+import { Menu, X, ShoppingCart, User, Search, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useCart } from "@/context/cart-context"
 import { useAuth } from "@/context/auth-context"
@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { cartItems } = useCart()
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, logout } = useAuth()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,21 +58,38 @@ export default function Navbar() {
             <Link href="/faq" className="text-white hover:text-orange-500 font-display">
               FAQ
             </Link>
-            <Link href="#contact" className="text-white hover:text-orange-500 font-display">
+            <Link href="/contact" className="text-white hover:text-orange-500 font-display">
               Contact
             </Link>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon">
               <Search className="h-5 w-5" />
-            </Button> */}
-            <Link href={isAuthenticated ? "/profile" : "/login"}>
-              <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
-              </Button>
-            </Link>
+            </Button>
+            {isAuthenticated ? (
+              <div className="flex items-center space-x-2">
+                <Link href="/profile">
+                  <Button variant="ghost" className="flex items-center space-x-2">
+                    <User className="h-5 w-5" />
+                    <span>Profile</span>
+                  </Button>
+                </Link>
+                <Button variant="ghost" size="icon" onClick={logout}>
+                  <LogOut className="h-5 w-5" />
+                </Button>
+              </div>
+            ) : (
+              <Link href="/login">
+                <Button
+                  variant="outline"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+                >
+                  Login / Register
+                </Button>
+              </Link>
+            )}
             <Link href="/cart">
               <Button variant="ghost" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
@@ -144,13 +161,34 @@ export default function Navbar() {
               >
                 Contact
               </Link>
-              <Link
-                href={isAuthenticated ? "/profile" : "/login"}
-                className="text-white hover:text-orange-500 font-display py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {isAuthenticated ? "Profile" : "Login"}
-              </Link>
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    href="/profile"
+                    className="text-white hover:text-orange-500 font-display py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Profile
+                  </Link>
+                  <button
+                    className="text-white hover:text-orange-500 font-display py-2 text-left"
+                    onClick={() => {
+                      logout()
+                      setIsOpen(false)
+                    }}
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  href="/login"
+                  className="text-white hover:text-orange-500 font-display py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Login / Register
+                </Link>
+              )}
             </nav>
           </div>
         </div>

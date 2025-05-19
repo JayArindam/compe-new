@@ -1,17 +1,29 @@
-// import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "supersecretkey";
+const JWT_SECRET = process.env.JWT_SECRET;
 
-const authMiddleware = (req: any, res: any, next: any) => {
-  const token = req.header("Authorization")?.split(" ")[1];
+if (!JWT_SECRET) {
+  throw new Error("Missing JWT_SECRET environment variable");
+}
 
-  if (!token) {
+interface AuthenticatedRequest extends Request {
+  user?: string;
+}
+
+const authMiddleware = (req: any, res: any, next: NextFunction) => {
+  const authHeader = req.header("Authorization") || req.header("authorization");
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).json({ message: "No token, authorization denied" });
   }
 
+  const token = authHeader.split(" ")[1];
+
   try {
-    const decoded: any = jwt.verify(token, JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET) as { userId?: string };
+    if (!decoded.userId) {
+      return res.status(401).json({ message: "Token payload invalid" });
+    }
     req.user = decoded.userId;
     next();
   } catch (err) {
