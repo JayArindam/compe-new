@@ -200,7 +200,7 @@ export default function ProductsPage() {
       {/* Search and Mobile Filter Toggle */}
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <div className="relative flex-grow">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          {/* <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" /> */}
           <Input
             type="text"
             placeholder="Search products..."
